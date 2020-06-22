@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Invidious Playlist Duration",
+  "version": "1.2",
+  "description": "Show Playlists Duration in Invidio.us Web App.",
+  "homepage_url": "https://github.com/rsapkf",
+  "content_scripts": [
+    {
+      "matches": ["*://*.invidio.us/playlist?list=*"],
+      "js": ["content-script-invidious.js"]
+    }
+  ]
+}
