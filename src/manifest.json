@@ -3,7 +3,7 @@
   "name": "Invidious Playlist Duration",
   "version": "1.2",
   "description": "Show Playlists Duration in Invidio.us Web App.",
-  "homepage_url": "https://github.com/rsapkf",
+  "homepage_url": "https://github.com/rsapkf/invidious-playlist-duration",
   "content_scripts": [
     {
       "matches": ["*://*.invidio.us/playlist?list=*"],
