@@ -1,12 +1,18 @@
 {
   "manifest_version": 2,
-  "name": "Invidious Playlist Duration",
-  "version": "1.2",
-  "description": "Show Playlists Duration in Invidio.us Web App.",
-  "homepage_url": "https://github.com/rsapkf/invidious-playlist-duration",
+  "name": "Inviduration",
+  "version": "1.3",
+  "description": "Shows Playlists Duration in Invidio.us instances.",
+  "homepage_url": "https://github.com/rsapkf/inviduration",
   "content_scripts": [
     {
-      "matches": ["*://*.invidio.us/playlist?list=*"],
+      "matches": [
+        "*://invidious.snopyta.org/playlist?list=*",
+        "*://invidious.kavin.rocks/playlist?list=*",
+        "*://*.invidious.xyz/playlist?list=*",
+        "*://*.yewtu.be/playlist?list=*",
+        "*://*.invidious.tube/playlist?list=*"
+      ],
       "js": ["content-script-invidious.js"]
     }
   ]

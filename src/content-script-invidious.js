@@ -1,28 +1,30 @@
-// get playlist id from URL
-let url = window.location.href;
-let playlistId = url.replace('https://invidio.us/playlist?list=', '');
+// get playlist and instance id from URL
+const url = window.location.href;
+const params = new URLSearchParams(window.location.search);
+const playlistId = params.get('list');
+const instance = window.location.hostname;
 
 // invidio.us API (doesn't work for playlists having >100 videos)
-fetch(`https://invidio.us/api/v1/playlists/${playlistId}`)
+fetch(`https://${instance}/api/v1/playlists/${playlistId}`)
   .then((res) => res.json())
   .then((data) => {
-    totalSeconds = 0;
+    let totalSeconds = 0;
     for (video of data.videos) {
       totalSeconds += video.lengthSeconds;
     }
 
-    let duration = secondsToHumanReadableFormat(totalSeconds);
+    const duration = secondsToHumanReadableFormat(totalSeconds);
 
-    let node = document.querySelector('.pure-u-2-3 b');
-    let textnode = document.createTextNode(`| Duration: ${duration}`);
+    const node = document.querySelector('.pure-u-2-3 b');
+    const textnode = document.createTextNode(`| Duration: ${duration}`);
     node.appendChild(textnode);
   });
 
 const secondsToHumanReadableFormat = (totalSeconds) => {
-  hours = Math.floor(totalSeconds / 3600);
+  let hours = Math.floor(totalSeconds / 3600);
   totalSeconds %= 3600;
-  minutes = Math.floor(totalSeconds / 60);
-  seconds = totalSeconds % 60;
+  let minutes = Math.floor(totalSeconds / 60);
+  let seconds = totalSeconds % 60;
 
   hours < 10 ? (hours = `0${hours}`) : hours;
   minutes < 10 ? (minutes = `0${minutes}`) : minutes;
