@@ -6,7 +6,7 @@ Download from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addo
 
 It currently works on these instances:
 
-- [https://invidious.synopyta.org/](https://invidious.synopyta.org/)
+- [https://invidious.snopyta.org/](https://invidious.snopyta.org/)
 - [https://invidious.kavin.rocks/](https://invidious.kavin.rocks/)
 - [https://invidious.xyz/](https://invidious.xyz/)
 - [https://yewtu.be/](https://yewtu.be/)
