@@ -3,6 +3,7 @@
 This Firefox add-on shows total duration of playlists in [Invidio.us](https://github.com/omarroth/invidious) web app/instances.
 
 Download from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/inviduration/).
+Try this addon [here](https://invidious.snopyta.org/playlist?list=PL3A5849BDE0581B19).
 
 It currently works on these instances:
 
