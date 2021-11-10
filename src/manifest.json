@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Inviduration",
+  "version": "0.1.0",
+  "description": "Shows playlists duration in Invidio.us instances.",
+  "homepage_url": "https://github.com/rsapkf/inviduration",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://invidious.snopyta.org/playlist?list=*",
+        "*://invidious.kavin.rocks/playlist?list=*",
+        "*://*.invidious.xyz/playlist?list=*",
+        "*://*.yewtu.be/playlist?list=*",
+        "*://*.invidious.tube/playlist?list=*"
+      ],
+      "js": ["content-script-invidious.js"]
+    }
+  ]
+}
